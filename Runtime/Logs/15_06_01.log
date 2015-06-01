@@ -1,0 +1,47 @@
+[ 2015-06-01T20:56:55+08:00 ] 127.0.0.1 /office/
+ERR: 模板不存在:./Application/Home/View/default/Index/index.html
+
+[ 2015-06-01T20:57:06+08:00 ] 127.0.0.1 /office/Admin/Public/login
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000888s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001715s ]
+SQL: SHOW COLUMNS FROM `zs_ucenter_member` [ RunTime:0.022098s ]
+SQL: SELECT * FROM `zs_ucenter_member` WHERE ( `username` = 'admin' ) LIMIT 1   [ RunTime:0.011034s ]
+SQL: UPDATE `zs_ucenter_member` SET `last_login_time`=1433163426,`last_login_ip`='2130706433' WHERE ( `id` = 1 ) [ RunTime:0.013624s ]
+SQL: SHOW COLUMNS FROM `zs_member` [ RunTime:0.024670s ]
+SQL: SELECT `uid`,`nickname`,`name`,`address`,`sex`,`birthday`,`mobile`,`score`,`login`,`reg_ip`,`reg_time`,`last_login_ip`,`last_login_time`,`status` FROM `zs_member` WHERE ( `uid` = 1 ) LIMIT 1   [ RunTime:0.000960s ]
+SQL: SHOW COLUMNS FROM `zs_action` [ RunTime:0.031525s ]
+SQL: SELECT * FROM `zs_action` WHERE ( `name` = 'user_login' ) LIMIT 1   [ RunTime:0.084316s ]
+SQL: SHOW COLUMNS FROM `zs_member` [ RunTime:0.003803s ]
+SQL: SELECT `nickname` FROM `zs_member` WHERE ( `uid` = 1 ) LIMIT 1   [ RunTime:0.000376s ]
+SQL: SHOW COLUMNS FROM `zs_action_log` [ RunTime:0.032787s ]
+SQL: INSERT INTO `zs_action_log` (`action_id`,`user_id`,`action_ip`,`model`,`record_id`,`create_time`,`remark`) VALUES (1,1,2130706433,'member',1,1433163426,'admin在2015-06-01 20:57登录了后台') [ RunTime:0.077479s ]
+SQL: SELECT * FROM `zs_action` WHERE ( `name` = 'user_login' ) LIMIT 1   [ RunTime:0.000617s ]
+NOTIC: [8] Undefined offset: 1 C:\wamp\www\office\Application\Common\Common\function.php 第 691 行.
+NOTIC: [2] array_key_exists() expects parameter 2 to be array, null given C:\wamp\www\office\Application\Common\Common\function.php 第 691 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `zs_action_log` WHERE ( `action_id` = 1 ) AND ( `user_id` = 1 ) AND ( `create_time` > 1433077026 ) LIMIT 1   [ RunTime:0.065206s ]
+SQL: UPDATE `zs_member` SET `score`=score+10 WHERE ( uid=1 AND status>-1 ) [ RunTime:0.000422s ]
+SQL: UPDATE `zs_member` SET `login`=`login`+1,`last_login_time`=1433163426,`last_login_ip`='2130706433' WHERE ( `uid` = 1 ) [ RunTime:0.000305s ]
+
+[ 2015-06-01T21:26:05+08:00 ] 127.0.0.1 /office/Shop/Index/index
+ERR: 无法加载控制器:Index
+
+[ 2015-06-01T21:26:27+08:00 ] 127.0.0.1 /office/Admin/Public/login
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001415s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002267s ]
+SQL: SHOW COLUMNS FROM `zs_ucenter_member` [ RunTime:0.004241s ]
+SQL: SELECT * FROM `zs_ucenter_member` WHERE ( `username` = 'admin' ) LIMIT 1   [ RunTime:0.000533s ]
+SQL: UPDATE `zs_ucenter_member` SET `last_login_time`=1433165187,`last_login_ip`='2130706433' WHERE ( `id` = 1 ) [ RunTime:0.000394s ]
+SQL: SHOW COLUMNS FROM `zs_member` [ RunTime:0.003604s ]
+SQL: SELECT `uid`,`nickname`,`name`,`address`,`sex`,`birthday`,`mobile`,`score`,`login`,`reg_ip`,`reg_time`,`last_login_ip`,`last_login_time`,`status` FROM `zs_member` WHERE ( `uid` = 1 ) LIMIT 1   [ RunTime:0.000469s ]
+SQL: SHOW COLUMNS FROM `zs_action` [ RunTime:0.003478s ]
+SQL: SELECT * FROM `zs_action` WHERE ( `name` = 'user_login' ) LIMIT 1   [ RunTime:0.000478s ]
+SQL: SHOW COLUMNS FROM `zs_action_log` [ RunTime:0.003416s ]
+SQL: INSERT INTO `zs_action_log` (`action_id`,`user_id`,`action_ip`,`model`,`record_id`,`create_time`,`remark`) VALUES (1,1,2130706433,'member',1,1433165187,'admin在2015-06-01 21:26登录了后台') [ RunTime:0.000403s ]
+SQL: SELECT * FROM `zs_action` WHERE ( `name` = 'user_login' ) LIMIT 1   [ RunTime:0.000373s ]
+NOTIC: [8] Undefined offset: 1 C:\wamp\www\office\Application\Common\Common\function.php 第 691 行.
+NOTIC: [2] array_key_exists() expects parameter 2 to be array, null given C:\wamp\www\office\Application\Common\Common\function.php 第 691 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `zs_action_log` WHERE ( `action_id` = 1 ) AND ( `user_id` = 1 ) AND ( `create_time` > 1433078787 ) LIMIT 1   [ RunTime:0.000403s ]
+SQL: UPDATE `zs_member` SET `login`=`login`+1,`last_login_time`=1433165187,`last_login_ip`='2130706433' WHERE ( `uid` = 1 ) [ RunTime:0.000319s ]
+
